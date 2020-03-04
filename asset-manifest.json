@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/redux-shop-clothes/static/css/main.1e006de9.chunk.css",
+    "main.js": "/redux-shop-clothes/static/js/main.fd381e67.chunk.js",
+    "main.js.map": "/redux-shop-clothes/static/js/main.fd381e67.chunk.js.map",
+    "runtime-main.js": "/redux-shop-clothes/static/js/runtime-main.87fcc515.js",
+    "runtime-main.js.map": "/redux-shop-clothes/static/js/runtime-main.87fcc515.js.map",
+    "static/js/2.7f10ce92.chunk.js": "/redux-shop-clothes/static/js/2.7f10ce92.chunk.js",
+    "static/js/2.7f10ce92.chunk.js.map": "/redux-shop-clothes/static/js/2.7f10ce92.chunk.js.map",
+    "index.html": "/redux-shop-clothes/index.html",
+    "precache-manifest.d39e92437545ff2e9d1f3c8910b8c118.js": "/redux-shop-clothes/precache-manifest.d39e92437545ff2e9d1f3c8910b8c118.js",
+    "service-worker.js": "/redux-shop-clothes/service-worker.js",
+    "static/css/main.1e006de9.chunk.css.map": "/redux-shop-clothes/static/css/main.1e006de9.chunk.css.map",
+    "static/js/2.7f10ce92.chunk.js.LICENSE.txt": "/redux-shop-clothes/static/js/2.7f10ce92.chunk.js.LICENSE.txt",
+    "static/media/crown.594fb5fe.svg": "/redux-shop-clothes/static/media/crown.594fb5fe.svg",
+    "static/media/shopping-bag.30f07071.svg": "/redux-shop-clothes/static/media/shopping-bag.30f07071.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87fcc515.js",
+    "static/js/2.7f10ce92.chunk.js",
+    "static/css/main.1e006de9.chunk.css",
+    "static/js/main.fd381e67.chunk.js"
+  ]
+}
