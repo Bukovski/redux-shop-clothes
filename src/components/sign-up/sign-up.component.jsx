@@ -5,6 +5,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import './sign-up.styles.scss';
 
+
 class SignUp extends React.Component {
 	constructor() {
 		super();
@@ -27,16 +28,12 @@ class SignUp extends React.Component {
 			return;
 		}
 		
-		try {
-			this.setState({
-				displayName: '',
-				email: '',
-				password: '',
-				confirmPassword: ''
-			});
-		} catch (error) {
-			console.error(error);
-		}
+		this.setState({
+			displayName: '',
+			email: '',
+			password: '',
+			confirmPassword: ''
+		});
 	};
 	
 	handleChange = event => {
@@ -76,6 +73,7 @@ class SignUp extends React.Component {
 						value={ password }
 						onChange={ this.handleChange }
 						label='Password'
+						autoComplete="on"
 						required
 					/>
 					<FormInput
@@ -84,11 +82,12 @@ class SignUp extends React.Component {
 						value={ confirmPassword }
 						onChange={ this.handleChange }
 						label='Confirm Password'
+						autoComplete="on"
 						required
 					/>
 					<CustomButton type='submit'>SIGN UP</CustomButton>
 				</form>
-				
+			
 			</div>
 		);
 	}
