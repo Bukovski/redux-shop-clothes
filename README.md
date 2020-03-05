@@ -29,6 +29,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * [node-sass](https://github.com/sass/node-sass) - compiler in css from sass
 * [gh-pages](https://pages.github.com/) - create a new repository with a live page on GitHub
 * [firebase](https://github.com/firebase/firebase-js-sdk) - for connection with [firebase.google.com](https://firebase.google.com/) data base
+* [redux](https://github.com/reduxjs/redux) - is a predictable state container for JavaScript apps
+* [react-redux](https://github.com/reduxjs/react-redux) - it lets React components read data from a Redux store, and dispatch actions to the store to update data.
+* [redux-logger](https://github.com/LogRocket/redux-logger) - is a middleware for Redux. It will log actions to console
 
 ![main-page](./screenshots/main-page.jpg)
 
