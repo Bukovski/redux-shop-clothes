@@ -12,6 +12,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * Rename `.env.local.example` to `.env.local` and add your data settings in fields
 * Create a new data base on [firebase.google.com](https://firebase.google.com/) website with name `crwn-db` and `users` collection. 
 * All settings save to `.env.local`
+
+
+### .env.local
+
+* REACT_APP_FIREBASE_SETTING - JSON with firebase settings
+* REACT_APP_BASENAME_DOMAIN - basename path `http://localhost:3000/basename/` 
  
 
 ### Available Scripts

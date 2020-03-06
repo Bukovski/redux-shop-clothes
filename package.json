@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/Bukovski/redux-shop-clothes.git"
   },
-  "homepage": ".",
+  "homepage": "https://bukovski.github.io/redux-shop-clothes/",
   "keywords": [
     "sass react",
     "react redux",

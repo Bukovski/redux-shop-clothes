@@ -8,12 +8,14 @@ import Routes from './Routes';
 
 import './index.css';
 
+const basenameDomain = process.env.REACT_APP_BASENAME_DOMAIN;
 
 ReactDOM.render(
 	<Provider store={ store }>
-		<BrowserRouter>
+		<BrowserRouter basename={ basenameDomain }>
 			<Routes />
 		</BrowserRouter>
 	</Provider>
 	, document.getElementById('root')
 );
+
