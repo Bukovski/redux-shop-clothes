@@ -38,6 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * [redux](https://github.com/reduxjs/redux) - is a predictable state container for JavaScript apps
 * [react-redux](https://github.com/reduxjs/react-redux) - it lets React components read data from a Redux store, and dispatch actions to the store to update data.
 * [redux-logger](https://github.com/LogRocket/redux-logger) - is a middleware for Redux. It will log actions to console
+* [reselect](https://github.com/reduxjs/reselect) - Redux library with a memoized selector that recalculates data from state when the value of state changes
 
 ![main-page](./screenshots/main-page.jpg)
 
