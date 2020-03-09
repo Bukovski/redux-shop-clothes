@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/redux-shop-clothes/static/css/main.a45f7712.chunk.css",
-    "main.js": "/redux-shop-clothes/static/js/main.27c22e8e.chunk.js",
-    "main.js.map": "/redux-shop-clothes/static/js/main.27c22e8e.chunk.js.map",
+    "main.css": "/redux-shop-clothes/static/css/main.4df28233.chunk.css",
+    "main.js": "/redux-shop-clothes/static/js/main.ad698346.chunk.js",
+    "main.js.map": "/redux-shop-clothes/static/js/main.ad698346.chunk.js.map",
     "runtime-main.js": "/redux-shop-clothes/static/js/runtime-main.87fcc515.js",
     "runtime-main.js.map": "/redux-shop-clothes/static/js/runtime-main.87fcc515.js.map",
-    "static/js/2.41479ee9.chunk.js": "/redux-shop-clothes/static/js/2.41479ee9.chunk.js",
-    "static/js/2.41479ee9.chunk.js.map": "/redux-shop-clothes/static/js/2.41479ee9.chunk.js.map",
+    "static/js/2.8096f70b.chunk.js": "/redux-shop-clothes/static/js/2.8096f70b.chunk.js",
+    "static/js/2.8096f70b.chunk.js.map": "/redux-shop-clothes/static/js/2.8096f70b.chunk.js.map",
     "index.html": "/redux-shop-clothes/index.html",
-    "precache-manifest.2daaf9ce3b383235891603ffff0031cf.js": "/redux-shop-clothes/precache-manifest.2daaf9ce3b383235891603ffff0031cf.js",
+    "precache-manifest.28a37b27b2600280c70bc2d0756c4c94.js": "/redux-shop-clothes/precache-manifest.28a37b27b2600280c70bc2d0756c4c94.js",
     "service-worker.js": "/redux-shop-clothes/service-worker.js",
-    "static/css/main.a45f7712.chunk.css.map": "/redux-shop-clothes/static/css/main.a45f7712.chunk.css.map",
-    "static/js/2.41479ee9.chunk.js.LICENSE.txt": "/redux-shop-clothes/static/js/2.41479ee9.chunk.js.LICENSE.txt",
+    "static/css/main.4df28233.chunk.css.map": "/redux-shop-clothes/static/css/main.4df28233.chunk.css.map",
+    "static/js/2.8096f70b.chunk.js.LICENSE.txt": "/redux-shop-clothes/static/js/2.8096f70b.chunk.js.LICENSE.txt",
     "static/media/crown.594fb5fe.svg": "/redux-shop-clothes/static/media/crown.594fb5fe.svg",
     "static/media/shopping-bag.30f07071.svg": "/redux-shop-clothes/static/media/shopping-bag.30f07071.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.87fcc515.js",
-    "static/js/2.41479ee9.chunk.js",
-    "static/css/main.a45f7712.chunk.css",
-    "static/js/main.27c22e8e.chunk.js"
+    "static/js/2.8096f70b.chunk.js",
+    "static/css/main.4df28233.chunk.css",
+    "static/js/main.ad698346.chunk.js"
   ]
 }

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "acdb53e382a6eb081b7d11aed8a7720e",
+    "revision": "cdbcae7aae5d3ad5703fe25fc2dba2b8",
     "url": "/redux-shop-clothes/index.html"
   },
   {
-    "revision": "c7b63fd8a77116efb3b6",
-    "url": "/redux-shop-clothes/static/css/main.a45f7712.chunk.css"
+    "revision": "6b154aec91943cd27661",
+    "url": "/redux-shop-clothes/static/css/main.4df28233.chunk.css"
   },
   {
-    "revision": "72eb3cddbbda88c07097",
-    "url": "/redux-shop-clothes/static/js/2.41479ee9.chunk.js"
+    "revision": "9000742dbe47462445a7",
+    "url": "/redux-shop-clothes/static/js/2.8096f70b.chunk.js"
   },
   {
     "revision": "7ba5a91c6aa4ae9cc068a25fb13d169c",
-    "url": "/redux-shop-clothes/static/js/2.41479ee9.chunk.js.LICENSE.txt"
+    "url": "/redux-shop-clothes/static/js/2.8096f70b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c7b63fd8a77116efb3b6",
-    "url": "/redux-shop-clothes/static/js/main.27c22e8e.chunk.js"
+    "revision": "6b154aec91943cd27661",
+    "url": "/redux-shop-clothes/static/js/main.ad698346.chunk.js"
   },
   {
     "revision": "80c9ef0b9b0a0ec4f3ad",
