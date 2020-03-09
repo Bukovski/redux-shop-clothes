@@ -8,6 +8,7 @@ import { auth, createUserProfileDocument } from 'firebase/firebase.utils';
 import { setCurrentUser } from "store/user/user.action";
 import { selectCurrentUser } from "store/user/user.selectors";
 
+import CheckoutPage from 'pages/checkout/checkout.component';
 import Header from 'components/header/header.component';
 import HomePage from 'pages/homepage/homepage.component';
 import ShopPage from 'pages/shop/shop.component';
@@ -56,6 +57,7 @@ class Routes extends React.Component {
         <Switch>
           <Route exact path='/' component={ HomePage }/>
           <Route path='/shop' component={ ShopPage }/>
+          <Route exact path='/checkout' component={ CheckoutPage } />
           <Route
             path='/signin'
             render={ () => currentUser
