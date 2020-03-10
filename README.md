@@ -42,6 +42,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * [reselect](https://github.com/reduxjs/reselect) - Redux library for memoization selector and recalculates data from state when the value of state changes
 * [redux-persist](https://github.com/rt2zz/redux-persist) - Persist and rehydrate a Redux store. Saves data locally to the browser store
 * [react-stripe-checkout](https://github.com/azmenak/react-stripe-checkout) - easy to take people's money, credit card purchases
+* [styled-components](https://styled-components.com/) - dynamic change of component styles by condition
+
 
 ![main-page](./screenshots/main-page.jpg)
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { Link } from 'react-router-dom';
 import { createStructuredSelector } from "reselect";
 
 import { auth } from "firebase/firebase.utils";
@@ -13,36 +12,36 @@ import CartDropdown from "components/cart-dropdown/cart-dropdown.component";
 
 import { ReactComponent as Logo } from 'assets/crown.svg';
 
-import './header.styles.scss';
+// import './header.styles.scss';
+import { OptionLink, HeaderContainer, LogoContainer, OptionDiv, OptionsContainer } from "./header.styles";
 
 
 const Header = ({ currentUser, hidden }) => {
   const handleSignOutClick = () => auth.signOut();
   
   return (
-    <div className='header'>
-      <Link className='logo-container' to='/'>
+    <HeaderContainer>
+      <LogoContainer to='/'>
         <Logo className='logo' />
-      </Link>
+      </LogoContainer>
       
-      <div className='options'>
-        <Link className='option' to='/shop'>SHOP</Link>
-        <Link className='option' to='/shop'>CONTACT</Link>
+      <OptionsContainer>
+        <OptionLink to='/shop'>SHOP</OptionLink>
+        <OptionLink to='/shop'>CONTACT</OptionLink>
         
         { currentUser ? (
-            <div className='option' onClick={ handleSignOutClick }>
-              SIGN OUT
-            </div>
+            <OptionDiv onClick={ handleSignOutClick }>SIGN OUT</OptionDiv>
           ) : (
-            <Link className='option' to='/signin'>SIGN IN</Link>
+            <OptionLink to='/signin'>SIGN IN</OptionLink>
           )
         }
   
         <CartIcon />
-      </div>
+      </OptionsContainer>
+      
       {/* show/hide dropdown top mini-menu */}
       { hidden ? null : <CartDropdown /> }
-    </div>
+    </HeaderContainer>
   );
 };
 
