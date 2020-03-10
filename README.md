@@ -17,6 +17,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### .env.local
 
 * REACT_APP_FIREBASE_SETTING - JSON with firebase settings
+* REACT_APP_STRIPE_CHECKOUT_KEY - key from [dashboard.stripe.com](https://dashboard.stripe.com/). Credit card payment form
 * REACT_APP_BASENAME_DOMAIN - basename path `http://localhost:3000/basename/` 
  
 
@@ -40,6 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * [redux-logger](https://github.com/LogRocket/redux-logger) - is a middleware for Redux. It will log actions to console
 * [reselect](https://github.com/reduxjs/reselect) - Redux library for memoization selector and recalculates data from state when the value of state changes
 * [redux-persist](https://github.com/rt2zz/redux-persist) - Persist and rehydrate a Redux store. Saves data locally to the browser store
+* [react-stripe-checkout](https://github.com/azmenak/react-stripe-checkout) - easy to take people's money, credit card purchases
 
 ![main-page](./screenshots/main-page.jpg)
 
@@ -48,5 +50,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ![sign-in-page](./screenshots/sign-in-page.jpg)
 
 ![cart-page](./screenshots/cart-page.jpg)
+
+![credit-card-form](./screenshots/credit-card-form.jpg)
 
 
