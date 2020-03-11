@@ -22,7 +22,7 @@ class Routes extends React.Component {
   unsubscribeFromAuth = null;
   
   componentDidMount() {
-    const { setCurrentUser, collectionsArray } = this.props;
+    const { setCurrentUser } = this.props;
   
     // this triggered the observer when users were signed in, signed out
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -41,9 +41,6 @@ class Routes extends React.Component {
       }
   
       setCurrentUser(userAuth);
-      addCollectionAndDocuments('collections',
-        collectionsArray.map(({ title, items }) => ({ title, items }))
-      )
     });
   }
   

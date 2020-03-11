@@ -10,12 +10,17 @@ export const selectCollections = createSelector(
 
 export const selectCollectionsForPreview = createSelector(
 	[ selectCollections ],
-	collections => Object.keys(collections).map(key => collections[ key ])
+	collections => collections
+		? Object.keys(collections).map(key => collections[key])
+		: [] // if the data has not yet come from the database
 );
 
 // looking for the category received from the URL
 // transfers only this data group for output on one page
-export const selectCollection = collectionUrlParam => createSelector(
-	[ selectCollections ],
-	collections => collections[ collectionUrlParam ]
-);
+export const selectCollection = collectionUrlParam =>
+	createSelector(
+		[ selectCollections ],
+		collections => collections
+			? collections[collectionUrlParam]
+			: null // if the data has not yet come from the database
+	);
