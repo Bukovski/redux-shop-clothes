@@ -17,7 +17,7 @@ firebase.initializeApp(config); // connect to db
 export const createUserProfileDocument = async (userAuth, additionalData) => {
 	if (!userAuth) return;
 	
-	const userRef = firestore.doc(`users/${ userAuth.uid }`);
+	const userRef = firestore.doc(`users/${userAuth.uid}`);
 	const snapShot = await userRef.get(); // get auth data from db
 	
 	if (!snapShot.exists) { // new user only
@@ -37,6 +37,20 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 	}
 	
 	return userRef; // data about old user from db
+};
+
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
+	const collectionRef = firestore.collection(collectionKey);
+	
+	const batch = firestore.batch();
+	
+	objectsToAdd.forEach(obj => {
+		const newDocRef = collectionRef.doc();
+		
+		batch.set(newDocRef, obj)
+	});
+	
+	return await batch.commit();
 };
 
 export const auth = firebase.auth(); // auth

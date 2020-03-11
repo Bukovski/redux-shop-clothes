@@ -7,6 +7,7 @@ import { auth, createUserProfileDocument } from 'firebase/firebase.utils';
 
 import { setCurrentUser } from "store/user/user.action";
 import { selectCurrentUser } from "store/user/user.selectors";
+import { selectCollectionsForPreview } from "store/shop/shop.selectors";
 
 import CheckoutPage from 'pages/checkout/checkout.component';
 import Header from 'components/header/header.component';
@@ -21,7 +22,7 @@ class Routes extends React.Component {
   unsubscribeFromAuth = null;
   
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser, collectionsArray } = this.props;
   
     // this triggered the observer when users were signed in, signed out
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -39,7 +40,10 @@ class Routes extends React.Component {
         });
       }
   
-      setCurrentUser({ currentUser: userAuth });
+      setCurrentUser(userAuth);
+      addCollectionAndDocuments('collections',
+        collectionsArray.map(({ title, items }) => ({ title, items }))
+      )
     });
   }
   
@@ -73,7 +77,8 @@ class Routes extends React.Component {
 
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview
 });
 
 const mapDispatchToProps = dispatch =>({
