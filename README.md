@@ -43,7 +43,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * [redux-persist](https://github.com/rt2zz/redux-persist) - Persist and rehydrate a Redux store. Saves data locally to the browser store
 * [react-stripe-checkout](https://github.com/azmenak/react-stripe-checkout) - easy to take people's money, credit card purchases
 * [styled-components](https://styled-components.com/) - dynamic change of component styles by condition
-* [redux-thunk](https://github.com/reduxjs/redux-thunk) - async data middleware for Redux
+* [redux-saga](https://redux-saga.js.org/) - async data middleware for Redux, intercept actions with side effects and handle them, Redux reducers remain pure.
 
 
 ![main-page](./screenshots/main-page.jpg)

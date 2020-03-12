@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import { fetchCollectionsStartAsync } from "store/shop/shop.actions";
+import { fetchCollectionsStart } from "store/shop/shop.actions";
 
 import CollectionContainer from "pages/collection/collection.container";
 import CollectionsOverviewContainer from 'components/collections-overview/collections-overview.container'
@@ -10,9 +10,9 @@ import CollectionsOverviewContainer from 'components/collections-overview/collec
 
 class ShopPage extends React.Component {
   componentDidMount() {
-    const { fetchCollectionsStartAsync } = this.props;
-    
-    fetchCollectionsStartAsync(); // data request to firebase db
+    const { fetchCollectionsStart } = this.props;
+  
+    fetchCollectionsStart(); // start data request to firebase db using saga
   }
   
   
@@ -37,7 +37,7 @@ class ShopPage extends React.Component {
 
 
 const mapDispatchToProps = dispatch => ({
-  fetchCollectionsStartAsync: () => dispatch(fetchCollectionsStartAsync())
+  fetchCollectionsStart: () => dispatch(fetchCollectionsStart())
 });
 
 
