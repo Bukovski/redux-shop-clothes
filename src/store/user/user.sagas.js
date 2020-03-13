@@ -8,13 +8,14 @@ import {
 import UserActionTypes from './user.types';
 import {
   signInSuccess, signInFailure,
-  signOutSuccess, signOutFailure
+  signOutSuccess, signOutFailure,
+  signUpSuccess, signUpFailure
 } from './user.action';
 
 
-export function* getSnapshotFromUserAuth(userAuth) {
+export function* getSnapshotFromUserAuth(userAuth, additionalData) {
   try {
-    const userRef = yield call(createUserProfileDocument, userAuth);
+    const userRef = yield call(createUserProfileDocument, userAuth, additionalData);
     const userSnapshot = yield userRef.get();
     
     yield put(signInSuccess({
@@ -88,6 +89,33 @@ export function* onSignOutStart() {
   yield takeLatest(UserActionTypes.SIGN_OUT_START, signOut)
 }
 
+// create a new user
+export function* signUp({ payload: { email, password, displayName } }) {
+  try {
+    const { user } = yield auth.createUserWithEmailAndPassword(
+      email,
+      password
+    );
+    
+    yield put(signUpSuccess({ user, additionalData: { displayName } }));
+  } catch (error) {
+    yield put(signUpFailure(error));
+  }
+}
+
+export function* onSignUpStart() {
+  yield takeLatest(UserActionTypes.SIGN_UP_START, signUp)
+}
+
+// Called when data is sent to the server. We can now get them and sign in for a new user
+export function* signInAfterSignUp({ payload: { user, additionalData } }) {
+  yield getSnapshotFromUserAuth(user, additionalData);
+}
+
+export function* onSignUpSuccess() {
+  yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp);
+}
+
 // connect all start functions
 export function* userSagas() {
   yield all([
@@ -95,5 +123,7 @@ export function* userSagas() {
     call(onEmailSignInStart),
     call(onCheckUserSession),
     call(onSignOutStart),
+    call(onSignUpStart),
+    call(onSignUpSuccess),
   ])
 }
