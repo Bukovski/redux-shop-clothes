@@ -12,7 +12,8 @@ import HomePage from 'pages/homepage/homepage.component';
 import ShopPage from 'pages/shop/shop.component';
 import SignInAndSignUpPage from "pages/sign-in-sign-up/sign-in-and-sign-up.component";
 
-import './Routes.css';
+// import './Routes.css';
+import { GlobalStyle } from './global.styles';
 
 
 class Routes extends React.Component {
@@ -28,6 +29,8 @@ class Routes extends React.Component {
     
     return (
       <div>
+        <GlobalStyle />
+        
         <Header />
       
         <Switch>
