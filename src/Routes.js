@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -20,43 +20,38 @@ const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-sign-up/sign-in-a
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
 
-class Routes extends React.Component {
-  componentDidMount() {
-    const { checkUserSession } = this.props;
-    
+const Routes = ({ checkUserSession, currentUser }) => {
+  useEffect(() => {
     checkUserSession();
-  }
+  }, [ checkUserSession ]);
   
   
-  render() {
-    const { currentUser } = this.props;
-    
-    return (
-      <div>
-        <GlobalStyle />
-        
-        <Header />
-        
-        <Switch>
-          <ErrorBoundary>
-            <Suspense fallback={ <Spinner /> }>
-              <Route exact path='/' component={ HomePage }/>
-              <Route path='/shop' component={ ShopPage }/>
-              <Route exact path='/checkout' component={ CheckoutPage } />
-              <Route
-                path='/signin'
-                render={ () => currentUser
-                  ? ( <Redirect to='/' /> )
-                  : ( <SignInAndSignUpPage /> )
-                }
-              />
-            </Suspense>
-          </ErrorBoundary>
-        </Switch>
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <GlobalStyle />
+      
+      <Header />
+      
+      <Switch>
+        <ErrorBoundary>
+          <Suspense fallback={ <Spinner /> }>
+            <Route exact path='/' component={ HomePage }/>
+            <Route path='/shop' component={ ShopPage }/>
+            <Route exact path='/checkout' component={ CheckoutPage } />
+            <Route
+              path='/signin'
+              render={ () => currentUser
+                ? ( <Redirect to='/' /> )
+                : ( <SignInAndSignUpPage /> )
+              }
+            />
+          </Suspense>
+        </ErrorBoundary>
+      </Switch>
+    </div>
+  );
+};
+
 
 
 const mapStateToProps = createStructuredSelector({
