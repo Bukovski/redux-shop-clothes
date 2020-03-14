@@ -38,4 +38,27 @@
     padding-left: 12px;
     cursor: pointer;
   }
+  
+  @media screen and (max-width: 800px) {
+    .name,
+    .quantity,
+    .price {
+      font-size: 16px;
+    }
+  
+    .remove-button {
+      padding-left: 0;
+      cursor: pointer;
+    }
+  
+    .name {
+      width: 32%;
+    }
+    .quantity {
+      width: 23%;
+    }
+    .price {
+      width: 15%;
+    }
+  }
 }
