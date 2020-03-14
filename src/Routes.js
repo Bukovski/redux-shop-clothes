@@ -6,7 +6,8 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { checkUserSession } from "store/user/user.action";
 import { selectCurrentUser } from "store/user/user.selectors";
 
-import NotFound from "pages/not-found/not-found.component";
+import AboutPage from './pages/about/about.component';
+import NotFound from './pages/not-found/not-found.component';
 import Header from 'components/header/header.component';
 import Spinner from "components/spinner/spinner.component";
 import ErrorBoundary from "components/error-boundary/error-boundary.component";
@@ -18,7 +19,6 @@ const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-sign-up/sign-in-and-sign-up.component'));
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
-const AboutPage = lazy(() => import('./pages/about/about.component'));
 
 
 const Routes = ({ checkUserSession, currentUser }) => {
@@ -33,9 +33,9 @@ const Routes = ({ checkUserSession, currentUser }) => {
       
       <Header />
       
-      <Switch>
-        <ErrorBoundary>
-          <Suspense fallback={ <Spinner /> }>
+      <ErrorBoundary>
+        <Suspense fallback={ <Spinner /> }>
+          <Switch>
             <Route exact path='/' component={ HomePage }/>
             <Route path='/shop' component={ ShopPage }/>
             <Route path='/checkout' component={ CheckoutPage } />
@@ -46,11 +46,12 @@ const Routes = ({ checkUserSession, currentUser }) => {
                 : ( <SignInAndSignUpPage /> )
               }
             />
+            
             <Route path='/about' component={ AboutPage }/>
-            <Route path="*" component={ NotFound } />
-          </Suspense>
-        </ErrorBoundary>
-      </Switch>
+            <Route component={ NotFound } />
+          </Switch>
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 };
