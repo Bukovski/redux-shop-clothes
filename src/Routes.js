@@ -6,6 +6,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { checkUserSession } from "store/user/user.action";
 import { selectCurrentUser } from "store/user/user.selectors";
 
+import NotFound from "pages/not-found/not-found.component";
 import Header from 'components/header/header.component';
 import Spinner from "components/spinner/spinner.component";
 import ErrorBoundary from "components/error-boundary/error-boundary.component";
@@ -37,7 +38,7 @@ const Routes = ({ checkUserSession, currentUser }) => {
           <Suspense fallback={ <Spinner /> }>
             <Route exact path='/' component={ HomePage }/>
             <Route path='/shop' component={ ShopPage }/>
-            <Route exact path='/checkout' component={ CheckoutPage } />
+            <Route path='/checkout' component={ CheckoutPage } />
             <Route
               path='/signin'
               render={ () => currentUser
@@ -46,7 +47,7 @@ const Routes = ({ checkUserSession, currentUser }) => {
               }
             />
             <Route path='/about' component={ AboutPage }/>
-            <Redirect to='/' />
+            <Route path="*" component={ NotFound } />
           </Suspense>
         </ErrorBoundary>
       </Switch>

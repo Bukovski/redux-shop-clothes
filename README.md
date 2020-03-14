@@ -44,7 +44,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 * [react-stripe-checkout](https://github.com/azmenak/react-stripe-checkout) - easy to take people's money, credit card purchases
 * [styled-components](https://styled-components.com/) - dynamic change of component styles by condition
 * [redux-saga](https://redux-saga.js.org/) - async data middleware for Redux, intercept actions with side effects and handle them, Redux reducers remain pure.
-* [www.kapwing.com](https://www.kapwing.com/404-illustrations?ref=producthunt) - page have images for error messages 
+* [kapwing](https://www.kapwing.com/404-illustrations?ref=producthunt) - page have images for error messages 
 
 ![main-page](./screenshots/main-page.jpg)
 
@@ -57,5 +57,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 ![credit-card-form](./screenshots/credit-card-form.jpg)
 
 ![error-message](./screenshots/error-message.jpg)
+
+![page-not-found](./screenshots/page-not-found.jpg)
 
 

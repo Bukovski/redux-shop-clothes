@@ -11,24 +11,24 @@ import './checkout.styles.scss';
 
 const CheckoutPage = ({ cartItems, total }) => (
 	<div className='checkout-page'>
-		<div className='checkout-header'>
-			<div className='header-block'>
-				<span>Product</span>
-			</div>
-			<div className='header-block header-block--description'>
-				<span>Description</span>
-			</div>
-			<div className='header-block header-block--quantity'>
-				<span>Quantity</span>
-			</div>
-			<div className='header-block header-block--price'>
-				<span>Price</span>
-			</div>
-			<div className='header-block header-block--remove'>
-				<span>Remove</span>
-			</div>
-		</div>
-		{ cartItems.map(cartItem => <CheckoutItem key={ cartItem.id } cartItem={ cartItem } />)  }
+		<table className='checkout-header'>
+			<thead>
+			<tr>
+				<th className='header-block header-block--product'>Product</th>
+				<th className='header-block header-block--description'>Description</th>
+				<th className='header-block header-block--quantity'>Quantity</th>
+				<th className='header-block header-block--price'>Price</th>
+				<th className='header-block header-block--remove'>Remove</th>
+			</tr>
+			</thead>
+			<tbody>
+				{
+					cartItems.map(cartItem =>
+						<CheckoutItem key={ cartItem.id } cartItem={ cartItem } /> )
+				}
+			</tbody>
+		</table>
+		
 		<div className='total'>
 			<span>TOTAL: ${ total }</span>
 		</div>

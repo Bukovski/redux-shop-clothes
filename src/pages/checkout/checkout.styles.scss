@@ -8,15 +8,16 @@
   
   .checkout-header {
     width: 100%;
-    padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid darkgrey;
+    border-collapse: collapse;
+  
+    thead {
+      border-bottom: 1px solid darkgrey;
+    }
     
     .header-block {
       text-transform: capitalize;
       width: 23%;
-  
+      
       &--remove {
         width: 8%;
       }
@@ -43,19 +44,22 @@
   
   @media screen and (max-width: 800px) {
     width: 100%;
-  
+    
     & .checkout-header .header-block {
+      &--product {
+        width: 30%;
+      }
       &--description {
-        width: 25%;
+        width: 30%;
       }
       &--quantity {
         width: 15%;
       }
       &--price {
-        width: 7%;
+        width: 15%;
       }
       &--remove {
-        width: 14%;
+        width: 10%;
       }
     }
   }
