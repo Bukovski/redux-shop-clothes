@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import { addItem } from "store/cart/cart.actions";
 
-// import './collection-item.styles.scss';
 import { CollectionItemContainer, CollectionFooterContainer, AddButton, BackgroundImage, NameContainer, PriceContainer } from './collection-item.styles';
 
 

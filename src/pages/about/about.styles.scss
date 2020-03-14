@@ -1,0 +1,49 @@
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+  
+  &__title {
+    text-align: center;
+  }
+  
+  &__wrapper {
+    display: flex;
+  }
+  
+  &__left-sidebar {}
+  
+  &__image-wrap {
+    margin: 0 auto;
+    padding: 20px 15px;
+    width: 500px;
+  }
+  
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  
+  &__content {
+    font-size: 18px;
+  }
+  
+  &__text {}
+  
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+  
+    &__wrapper {
+      flex-direction: column;
+    }
+  
+    &__image-wrap {
+      padding: 0;
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    &__image {
+      height: 300px;
+    }
+  }
+}

@@ -2,7 +2,6 @@ import React from 'react';
 
 import CollectionItem from 'components/collection-item/collection-item.component';
 
-// import './collection-preview.styles.scss';
 import { CollectionPreviewContainer, TitleContainer, PreviewContainer } from './collection-preview.styles';
 
 
