@@ -50,9 +50,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ![shop-page](./screenshots/shop-page.jpg)
 
+![about-page](./screenshots/about-page.jpg)
+
 ![sign-in-page](./screenshots/sign-in-page.jpg)
 
 ![cart-page](./screenshots/cart-page.jpg)
+
+![categories-page](./screenshots/categories-page.jpg)
 
 ![credit-card-form](./screenshots/credit-card-form.jpg)
 

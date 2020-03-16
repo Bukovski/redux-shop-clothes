@@ -10,7 +10,7 @@ const About = () => (
     <div className="about__wrapper">
       <div className="about__left-sidebar">
         <aside className="about__image-wrap">
-          <img className="about__image" src="https://i.ibb.co/px2tCc3/jackets.png" alt="cloches" />
+          <img className="about__image" src="https://i.ibb.co/px2tCc3/jackets.png" alt="cloches" loading="auto" width="300" height="200" />
         </aside>
       </div>
       
