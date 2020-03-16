@@ -44,9 +44,9 @@ export const MenuItemContainer = styled.div`
 export const BackgroundImageContainer = styled.div`
   width: 100%;
   height: 100%;
+  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  background-color: #c0c3c3;
   background-size: cover;
-  background: ${({ imageUrl }) => `url(${imageUrl})`} 0 no-repeat #c0c3c3;
-  background-size: 100% auto;
 `;
 
 export const ContentContainer = styled.div`

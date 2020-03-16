@@ -55,9 +55,9 @@ export const BackgroundImage = styled.div`
   width: 100%;
   height: 95%;
   margin-bottom: 5px;
+  background-image: ${ ({ imageUrl }) => `url(${ imageUrl })`};
+  background-color: #c0c3c3;
   background-size: cover;
-  background: ${({ imageUrl }) => `url(${imageUrl})`} 0 no-repeat #c0c3c3;
-  background-size: 100% auto;
 `;
 
 export const CollectionFooterContainer = styled.div`
