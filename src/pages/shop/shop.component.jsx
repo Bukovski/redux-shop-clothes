@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -26,6 +27,12 @@ const ShopPage = ({ fetchCollectionsStart, match }) => {
       />
     </div>
   );
+};
+
+
+ShopPage.propTypes = {
+  match: PropTypes.object.isRequired,
+  fetchCollectionsStart: PropTypes.func.isRequired
 };
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 
 import { googleSignInStart, emailSignInStart } from "store/user/user.action";
@@ -74,6 +75,12 @@ class SignIn extends React.Component {
 		);
 	}
 }
+
+
+SignIn.propTypes = {
+	googleSignInStart: PropTypes.func.isRequired,
+	emailSignInStart: PropTypes.func.isRequired
+};
 
 
 const mapDispatchToProps = dispatch => ({

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { addItem } from "store/cart/cart.actions";
@@ -21,6 +22,16 @@ const CollectionItem = ({ item, addItem }) => {
       <AddButton onClick={ () => addItem(item) } inverted>Add to cart</AddButton>
     </CollectionItemContainer>
   );
+};
+
+
+CollectionItem.propTypes = {
+  item: PropTypes.shape({
+    imageUrl: PropTypes.string,
+    name: PropTypes.string,
+    price: PropTypes.number,
+  }),
+  addItem: PropTypes.func.isRequired
 };
 
 

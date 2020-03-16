@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 
 import { signUpStart } from 'store/user/user.action';
@@ -91,6 +92,11 @@ class SignUp extends React.Component {
 		);
 	}
 }
+
+
+SignUp.propTypes = {
+	signUpStart: PropTypes.func.isRequired
+};
 
 
 const mapDispatchToProps = dispatch => ({

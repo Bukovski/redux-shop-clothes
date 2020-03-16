@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { selectCollection } from 'store/shop/shop.selectors';
@@ -10,7 +11,7 @@ import './collection.styles.scss';
 
 const CollectionPage = ({ collection }) => {
   const { title, items } = collection;
-  
+
   return (
     <div className='collection-page'>
       <h2 className='title'>{ title }</h2>
@@ -23,6 +24,19 @@ const CollectionPage = ({ collection }) => {
       </div>
     </div>
   );
+};
+
+
+CollectionPage.propTypes = {
+  collection: PropTypes.shape({
+    title: PropTypes.string,
+    items: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number,
+      imageUrl: PropTypes.string,
+      name: PropTypes.string,
+      price: PropTypes.number
+    })),
+  })
 };
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from "reselect";
 
@@ -16,6 +17,12 @@ const CartIcon = ({ toggleCartHidden, itemCount }) => (
     <span className='item-count'>{ itemCount }</span>
   </div>
 );
+
+
+CartIcon.propTypes = {
+  itemCount: PropTypes.number.isRequired,
+  toggleCartHidden: PropTypes.func.isRequired
+};
 
 
 const mapDispatchToProps = dispatch => ({

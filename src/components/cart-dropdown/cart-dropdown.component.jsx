@@ -1,6 +1,7 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
+import { withRouter } from 'react-router-dom'
 import { createStructuredSelector } from "reselect";
 
 import { toggleCartHidden } from "store/cart/cart.actions";
@@ -32,6 +33,19 @@ const CartDropdown = ({ cartItems, history, dispatch }) => {
     <CustomButton onClick={ handleClickButton }>GO TO CHECKOUT</CustomButton>
     </div>
   )
+};
+
+
+CartDropdown.propTypes = {
+  cartItems: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    imageUrl: PropTypes.string,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    quantity: PropTypes.number
+  })),
+  history: PropTypes.object.isRequired,
+  dispatch: PropTypes.func.isRequired
 };
 
 

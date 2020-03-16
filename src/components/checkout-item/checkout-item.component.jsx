@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { clearItemFromCart, addItem, removeItem } from 'store/cart/cart.actions';
@@ -32,6 +33,19 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
 			</td>
 		</tr>
 	);
+};
+
+
+CheckoutItem.propTypes = {
+	cartItem: PropTypes.shape({
+		imageUrl: PropTypes.string,
+		name: PropTypes.string,
+		price: PropTypes.number,
+		quantity: PropTypes.number
+	}),
+	clearItem: PropTypes.func.isRequired,
+	addItem: PropTypes.func.isRequired,
+	removeItem: PropTypes.func.isRequired
 };
 
 

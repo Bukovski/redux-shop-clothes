@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -27,12 +28,12 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
         <OptionLink to='/about' activeClassName='is-active'>ABOUT</OptionLink>
         
         { currentUser ? (
-            <OptionLink as='div' onClick={ signOutStart }>SIGN OUT</OptionLink>
-          ) : (
-            <OptionLink to='/signin' activeClassName='is-active'>SIGN IN</OptionLink>
-          )
+          <OptionLink as='div' onClick={ signOutStart }>SIGN OUT</OptionLink>
+        ) : (
+          <OptionLink to='/signin' activeClassName='is-active'>SIGN IN</OptionLink>
+        )
         }
-  
+        
         <CartIcon />
       </OptionsContainer>
       
@@ -40,6 +41,24 @@ const Header = ({ currentUser, hidden, signOutStart }) => {
       { hidden ? null : <CartDropdown /> }
     </HeaderContainer>
   );
+};
+
+
+Header.propTypes = {
+  currentUser: PropTypes.oneOfType([
+    () => null,
+    PropTypes.shape({
+      id: PropTypes.string,
+      displayName: PropTypes.string,
+      email: PropTypes.string,
+      createdAt: PropTypes.shape({
+        seconds: PropTypes.number,
+        nanoseconds: PropTypes.number
+      })
+    })
+  ]),
+  hidden: PropTypes.bool,
+  signOutStart: PropTypes.func
 };
 
 

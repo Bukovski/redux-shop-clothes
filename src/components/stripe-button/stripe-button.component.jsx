@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import StripeCheckout from 'react-stripe-checkout';
 
 
@@ -25,6 +26,11 @@ const StripeCheckoutButton = ({ price }) => {
       stripeKey={ publishableKey }
     />
   );
+};
+
+
+StripeCheckoutButton.propTypes = {
+  price: PropTypes.number
 };
 
 

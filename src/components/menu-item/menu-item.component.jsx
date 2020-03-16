@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 import { BackgroundImageContainer, ContentContainer, ContentSubtitle, ContentTitle, MenuItemContainer } from './menu-item.styles';
@@ -19,6 +20,16 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
     </ContentContainer>
   </MenuItemContainer>
 );
+
+
+MenuItem.propTypes = {
+  title: PropTypes.string,
+  imageUrl: PropTypes.string,
+  size: PropTypes.string,
+  history: PropTypes.object,
+  linkUrl: PropTypes.string,
+  match: PropTypes.object
+};
 
 
 export default withRouter(MenuItem);

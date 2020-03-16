@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CollectionItem from 'components/collection-item/collection-item.component';
 
@@ -20,6 +21,21 @@ const CollectionPreview = ({ title, items, history, match, routeName }) => (
     </PreviewContainer>
   </CollectionPreviewContainer>
 );
+
+
+CollectionPreview.propTypes = {
+  title: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number,
+    imageUrl: PropTypes.string,
+    name: PropTypes.string,
+    price: PropTypes.number,
+    quantity: PropTypes.number
+  })),
+  history: PropTypes.object,
+  match: PropTypes.object,
+  routeName: PropTypes.string
+};
 
 
 export default CollectionPreview;
